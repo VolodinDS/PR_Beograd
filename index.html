@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmitrii Volodin PR Beograd | Software Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        .section {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1024px;
+        }
+        .accent-color {
+            color: #008080; /* Teal color */
+        }
+        .accent-bg {
+            background-color: #008080; /* Teal color */
+        }
+        .copy-button {
+            background-color: #374151; /* Dark gray */
+            color: #f9fafb;
+            transition-property: background-color;
+            transition-duration: 200ms;
+        }
+        .copy-button:hover {
+            background-color: #1f2937; /* Even darker gray */
+        }
+        .parallax-bg {
+            background-image: url('Gemini_Generated_Image_dgnxv9dgnxv9dgnx.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Parallax background section -->
+<div class="parallax-bg min-h-screen flex items-center justify-center">
+    <div class="text-center p-10 bg-white bg-opacity-90 rounded-3xl shadow-lg mx-4">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#1f2937] drop-shadow-lg">
+            Dmitrii Volodin PR Beograd
+        </h1>
+        <p class="mt-2 text-lg sm:text-xl text-[#374151] font-medium">
+            Software Development & IT Consulting
+        </p>
+        <a href="#about" class="mt-8 inline-block px-8 py-3 accent-bg text-white font-bold rounded-full shadow-lg transition-transform hover:scale-105 hover:bg-[#006666]">
+            Learn More
+        </a>
+    </div>
+</div>
+
+<!-- About Section -->
+<section id="about" class="py-16 md:py-24 bg-gray-100 flex items-center justify-center">
+    <div class="container mx-auto px-4">
+        <div class="section p-6 md:p-12">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">About the Company</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-base sm:text-lg text-gray-700 mb-4">
+                        Dmitrii Volodin PR Beograd is a sole proprietorship registered in Serbia. I specialize in software development, including web applications, APIs, and databases. My goal is to create high-quality and effective digital solutions tailored to meet the needs of my clients.
+                    </p>
+                </div>
+                <div class="w-full h-64 md:h-80 lg:h-96 bg-gray-700 rounded-lg overflow-hidden">
+                    <!-- Placeholder image for the company -->
+                    <img src="it.jpeg" alt="Abstract IT solutions image" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bank Account Section -->
+<section id="bank" class="py-16 md:py-24 bg-gray-100 flex items-center justify-center">
+    <div class="container mx-auto px-4">
+        <div class="section p-6 md:p-12">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">Bank Account Details</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="w-full h-64 md:h-80 lg:h-96 bg-gray-700 rounded-lg overflow-hidden">
+                    <img src="bank.jpeg" alt="Bank details image" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <p class="text-base sm:text-lg text-gray-700 mb-4">
+                        For payments under contracts and to pay invoices, you can use the following details.
+                    </p>
+                    <div class="bg-gray-200 p-6 rounded-lg">
+                        <ul class="space-y-3 text-gray-700">
+                            <li>
+                                <span class="font-bold text-gray-800">Recipient Name:</span> DMITRII VOLODIN PR BEOGRAD
+                            </li>
+                            <li>
+                                <span class="font-bold text-gray-800">Bank:</span> POSTAL SAVINGS BANK JSC BELGRADE
+                            </li>
+                            <li>
+                                <span class="font-bold text-gray-800">IBAN:</span> <span id="iban-value">RS35200389675010198882</span>
+                                <button onclick="copyToClipboard('iban-value')" class="ml-2 text-sm copy-button px-2 py-1 rounded-md hover:bg-gray-900 transition-colors">
+                                    Copy
+                                </button>
+                            </li>
+                            <li>
+                                <span class="font-bold text-gray-800">SWIFT/BIC:</span> <span id="swift-value">SBPORSBG</span>
+                                <button onclick="copyToClipboard('swift-value')" class="ml-2 text-sm copy-button px-2 py-1 rounded-md hover:bg-gray-900 transition-colors">
+                                    Copy
+                                </button>
+                            </li>
+                        </ul>
+                        <div id="copy-message" class="mt-4 text-center text-accent-color font-semibold hidden">
+                            Copied!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 md:py-24 bg-gray-100 flex items-center justify-center">
+    <div class="container mx-auto px-4">
+        <div class="section p-6 md:p-12">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">Contact Information</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="w-full h-64 md:h-80 lg:h-96 bg-gray-700 rounded-lg overflow-hidden">
+                    <img src="contact.jpeg" alt="Contact details image" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <p class="text-base sm:text-lg text-gray-700 mb-4">
+                        For business inquiries and collaboration proposals, please feel free to reach out.
+                    </p>
+                    <div class="bg-gray-200 p-6 rounded-lg">
+                        <ul class="space-y-3 text-gray-700">
+                            <li>
+                                <span class="font-bold text-gray-800">Email:</span> <a href="mailto:dmitrij.volodin2015@gmail.com" class="accent-color hover:underline">dmitrij.volodin2015@gmail.com</a>
+                            </li>
+                            <li>
+                                <span class="font-bold text-gray-800">Phone:</span> <a href="tel:+381641234567" class="accent-color hover:underline">+381616175825</a>
+                            </li>
+                            <li>
+                                <span class="font-bold text-gray-800">LinkedIn:</span> <a href="www.linkedin.com/in/dmitry-volodin-17738532b" target="_blank" class="accent-color hover:underline">www.linkedin.com/in/dmitry-volodin-17738532b</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 py-8 text-center text-gray-400">
+    <div class="container mx-auto px-4">
+        <p>© 2024-2025 Dmitrii Volodin PR Beograd. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function copyToClipboard(elementId) {
+        const textToCopy = document.getElementById(elementId).textContent;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const message = document.getElementById('copy-message');
+            message.classList.remove('hidden');
+            setTimeout(() => {
+                message.classList.add('hidden');
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+    }
+</script>
+</body>
+</html>
